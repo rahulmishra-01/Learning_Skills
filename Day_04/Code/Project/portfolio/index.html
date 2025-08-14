@@ -13,9 +13,9 @@
         <div class="logo">Portfolio</div>
     <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="hamburger">
         <i class="fas fa-bars"></i>
@@ -87,15 +87,24 @@
     <!--Footer-->
     <footer>
         <div class="social-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/rahulmishra-01" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rahul-mishra-503b53362/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
         <p>&copy; 2025 My Portfolio. All rights reserved.</p>
     </footer>
 
     <script>
-        
+        // Toggle mobile menu
+document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+    });
+});
     </script>
 </body>
 </html>
